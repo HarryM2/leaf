@@ -50,6 +50,8 @@ Once the source is downloaded you can proceed to build and configure an API inst
 ## Creating a JWT Signing Key
 The Leaf client and server communicate by [JSON Web Tokens, or JWTs](https://jwt.io/introduction/) (pronounced "JAh-ts"). In a bash terminal, start by creating a JWT signing key. This allows the JWT recipient to verify the sender is who they say they are.
 
+For Windows environments, installing [cygwin](http://cygwin.com/install.html) will provide a bash terminal where you can run the OpenSSL commands listed below. 
+
 Note that the output paths and password can be whatever you'd like, and you'll need to reference them in the environment variables in the next step.
 
 ```bash
@@ -58,7 +60,7 @@ openssl req -nodes -x509 -newkey rsa:2048 -keyout <your_key_path>/key.pem \
     "/CN=urn:leaf:issuer:leaf.<your_institution>.<tld>"
 ```
 ```bash
-openssl pkcs12 -in <your_key_path>/cert.pem -inkey key.pem \
+openssl pkcs12 -in <your_key_path>/cert.pem -inkey <your_key_path>/key.pem \
     -export -out <your_key_path>/leaf.pfx -password pass:<your_pass>
 ```
 
