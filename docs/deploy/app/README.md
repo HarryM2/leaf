@@ -69,8 +69,8 @@ openssl pkcs12 -in <your_key_path>/cert.pem -inkey <your_key_path>/key.pem \
 ### Windows 
 Sensitive configuration data specifying data sources and passwords are stored in environmental variables. These can be configured within IIS in the Configuration Editor.
 
-![Configuration Editor](https://github.com/uwrit/leaf/blob/master/docs/deploy/images/windows_env_vars1.png "Configuration Editor")
-![Environment Variables](https://github.com/uwrit/leaf/blob/master/docs/deploy/images/windows_env_vars2.png "Environment Variables")
+![Configuration Editor](https://github.com/HarryM2/leaf/blob/master/docs/deploy/images/windows_env_vars1.png "Configuration Editor")
+![Environment Variables](https://github.com/HarryM2/leaf/blob/master/docs/deploy/images/windows_env_vars2.png "Environment Variables")
 
 Make sure the following variables are defined:
 
